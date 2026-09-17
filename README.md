@@ -1,7 +1,7 @@
 # 🎂✨ Happy Birthday Website ✨💻  
 *A Code-Powered Birthday Gesture for Someone Special*  
 
-![Preview](./output.png) 
+![Preview](./images/output.png) 
 
 ---
 
