@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="Happy Birthday | RajCode">
+    <meta name="github" content="https://github.com/RajCode-xs1dd">
+    <link rel="stylesheet" href="style1.css">
+    <!-- <link rel="website icon" type="png" href="image/heart.png"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Have a Happy Birthday!</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="boxcontainer">
+            <div class="image">
+                <img src="./images/flag.png" alt="">
+            </div>
+            <div class="text-happybirthday">
+                <img src="./images/texthappy.png" alt="">
+            </div>
+            <div class="cake">
+                <img src="./images/cake.png" alt="">
+            </div>
+            <div class="box-balloon">
+                <div class="balloon-item1">
+                    <img src="./images/balloon.png" alt="">
+                </div>
+                <div class="balloon-item1">
+                    <img src="./images/balloon.png" alt="">
+                </div>
+            </div>
+            <div class="box-cloud">
+                <div class="cloud">
+                    <img src="./images/cloud.png" alt="">
+                </div>
+                <div class="cloud">
+                    <img src="./images/cloud.png" alt="">
+                </div>
+            </div>
+            <div class="box-firework">
+                <div class="firework">
+                    <img src="./images/firework.png" alt="">
+                    <img src="./images/firework1.png" alt="" id="firework1">
+                </div>
+                <div class="firework">
+                    <img src="./images/firework.png" alt="">
+                    <img src="./images/firework1.png" alt="" id="firework1">
+                </div>
+            </div>
+            <div class="paperCannons">
+                <img src="./images/paperCannons1.png" alt="">
+            </div>
+            <div class="box-giftbox">
+                <img src="./images/giftbox.png" alt="">
+                <img src="./images/giftbox.png" alt="">
+                <img src="./images/giftbox.png" alt="">
+                <img src="./images/giftbox.png" alt="">
+                <img src="./images/giftbox.png" alt="">
+                <img src="./images/giftbox.png" alt="">
+            </div>
+            <div class="mail">
+                <i class="fa-regular fa-envelope"></i>
+            </div>
+            <div class="boxcute">
+                <div class="cute1">
+                    <img src="./images/cute.png" alt="">
+                </div>
+                <div class="cute2">
+                    <img src="./images/cute.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="box__letter">
+
+            <div class="letter__border">
+
+                <div class="letter">
+
+                    <div class="title__letter"></div>
+
+                    <div class="content__letter">
+
+                        <div class="left">
+
+                            <img id="heart__letter" src="https://feeldreams.github.io/bunga.gif" alt="">
+
+                            <img class="heart heart_1 delay-0-2" width="20" src="./images/heart.png" alt="">
+
+                            <img class="heart heart_2 delay-0-4" width="20" src="./images/heart.png" alt="">
+
+                            <img class="heart heart_3 delay-0-6" width="20" src="./images/heart.png" alt="">
+
+                            <img class="heart heart_4 delay-0-8" width="20" src="./images/heart.png" alt="">
+
+                        </div>
+
+                        <div class="right">
+
+                            <div class="love__img">
+                                <img src="https://feeldreams.github.io/weee.gif" alt="" width="150">
+                            </div>
+
+                            <div class="text__letter">
+                                <p></p>
+                            </div>
+
+                            <img id="mewmew" width="80" src="./images/mewmew.gif" alt="">
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="close">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+    <div id="copy">
+        <p class="text-center text-white text-sm">Built with ❤️ by <a
+                href="https://rajcode-xs1dd.github.io/rajcode-website/">RajCode</a></p>
+    </div>
+    <audio id="birthdayMusic" src="./assets/music.mp3" preload="auto" loop></audio>
+</body>
+<script>
+    const birthdayMusic = document.getElementById("birthdayMusic");
+
+window.addEventListener("load", function () {
+    birthdayMusic.play().catch(function () {
+        document.addEventListener("click", function () {
+            birthdayMusic.play();
+        }, { once: true });
+    });
+});
+    document.addEventListener('mousemove', function (e) {
+        let body = document.querySelector('body');
+        let heart = document.createElement('span');
+        let x = e.offsetX;
+        let y = e.offsetY;
+        heart.style.left = x + 'px';
+        heart.style.top = y + 'px';
+
+        let size = Math.random() * 10;
+        heart.style.width = 4 * size + 'px';
+        heart.style.height = 4 * size + 'px';
+
+        let transformValue = Math.random() * 360;
+        heart.style.transform = 'rotate(' + transformValue + 'deg)';
+
+        body.appendChild(heart);
+
+        setTimeout(function () {
+            heart.remove();
+        }, 1000)
+    })
+    /* =========================================================
+       LETTER BOX SCRIPT
+       ========================================================= */
+
+    let datatxtletter = "You are a very special girl. I always silently thank you for coming into my life. Today, I wish you all the best, lots of health, and lots of joy. I always hope we will celebrate many more birthdays like this together. Happy birthday to you.💕";
+
+    let titleLetter = "To You!";
+
+    let charArrDateLetter = datatxtletter.split('');
+    let charArrTitle = titleLetter.split('');
+
+    let currentIndexLetter = 0;
+    let currentIndexTitle = 0;
+
+    let text__letter = document.querySelector(
+        ".box__letter .text__letter p"
+    );
+
+    let intervalContent;
+    let intervalTitle;
+
+
+    /* OPEN LETTER */
+
+    $(".mail").on("click", function () {
+
+        $(".box__letter").slideDown();
+
+        setTimeout(function () {
+
+            $(".box__letter .letter__border").slideDown();
+
+        }, 1000);
+
+
+        /* TITLE */
+
+        setTimeout(function () {
+
+            intervalTitle = setInterval(function () {
+
+                if (currentIndexTitle < charArrTitle.length) {
+
+                    document.querySelector(
+                        ".box__letter .title__letter"
+                    ).textContent += charArrTitle[currentIndexTitle];
+
+                    let heart = document.createElement("i");
+
+                    heart.className = "fa-solid fa-heart";
+
+                    document.querySelector(
+                        ".box__letter .title__letter"
+                    ).appendChild(heart);
+
+                    currentIndexTitle++;
+
+                } else {
+
+                    clearInterval(intervalTitle);
+
+                }
+
+            }, 100);
+
+        }, 2000);
+
+
+        /* MAIN GIFS */
+
+        setTimeout(function () {
+
+            document.querySelector(
+                ".box__letter #heart__letter"
+            ).classList.add("animationOp");
+
+            document.querySelector(
+                ".box__letter .love__img"
+            ).classList.add("animationOp");
+
+            document.querySelector(
+                ".box__letter #mewmew"
+            ).classList.add("animationOp");
+
+        }, 2800);
+
+
+        /* FLOATING HEARTS */
+
+        setTimeout(function () {
+
+            document.querySelectorAll(
+                ".box__letter .heart"
+            ).forEach(function (item) {
+
+                item.classList.add("animation");
+
+            });
+
+        }, 3500);
+
+
+        /* MESSAGE */
+
+        setTimeout(function () {
+
+            intervalContent = setInterval(function () {
+
+                if (
+                    currentIndexLetter <
+                    charArrDateLetter.length
+                ) {
+
+                    text__letter.textContent +=
+                        charArrDateLetter[currentIndexLetter];
+
+                    currentIndexLetter++;
+
+                } else {
+
+                    clearInterval(intervalContent);
+
+                }
+
+            }, 50);
+
+        }, 6000);
+
+    });
+
+
+    /* CLOSE LETTER */
+
+    $(".box__letter .close").on("click", function () {
+
+        clearInterval(intervalContent);
+        clearInterval(intervalTitle);
+
+        document.querySelector(
+            ".box__letter .title__letter"
+        ).textContent = "";
+
+        text__letter.textContent = "";
+
+        currentIndexLetter = 0;
+        currentIndexTitle = 0;
+
+
+        document.querySelector(
+            ".box__letter #heart__letter"
+        ).classList.remove("animationOp");
+
+        document.querySelector(
+            ".box__letter .love__img"
+        ).classList.remove("animationOp");
+
+        document.querySelector(
+            ".box__letter #mewmew"
+        ).classList.remove("animationOp");
+
+
+        document.querySelectorAll(
+            ".box__letter .heart"
+        ).forEach(function (item) {
+
+            item.classList.remove("animation");
+
+        });
+
+
+        $(".box__letter").slideUp();
+
+        $(".box__letter .letter__border").slideUp();
+
+    });
+
+</script>
+
+</html>
